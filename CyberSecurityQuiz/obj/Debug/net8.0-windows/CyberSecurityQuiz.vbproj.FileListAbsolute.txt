@@ -1,0 +1,17 @@
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\bin\Debug\net8.0-windows\CyberSecurityQuiz.exe
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\bin\Debug\net8.0-windows\CyberSecurityQuiz.deps.json
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\bin\Debug\net8.0-windows\CyberSecurityQuiz.runtimeconfig.json
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\bin\Debug\net8.0-windows\CyberSecurityQuiz.dll
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\bin\Debug\net8.0-windows\CyberSecurityQuiz.pdb
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\CyberSecurityQuiz.Form1.resources
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\CyberSecurityQuiz.vbproj.GenerateResource.cache
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\CyberSecurityQuiz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\CyberSecurityQuiz.AssemblyInfoInputs.cache
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\CyberSecurityQuiz.AssemblyInfo.vb
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\CyberSecurityQuiz.vbproj.CoreCompileInputs.cache
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\CyberSecurityQuiz.dll
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\refint\CyberSecurityQuiz.dll
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\CyberSecurityQuiz.pdb
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\CyberSecurityQuiz.genruntimeconfig.cache
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\ref\CyberSecurityQuiz.dll
+C:\Users\seoma\source\repos\CyberSecurityQuiz\CyberSecurityQuiz\obj\Debug\net8.0-windows\CyberSecurityQuiz.MessageBoxForm.resources

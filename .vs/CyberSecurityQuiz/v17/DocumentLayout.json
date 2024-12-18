@@ -1,0 +1,119 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|c:\\users\\seoma\\source\\repos\\cybersecurityquiz\\cybersecurityquiz\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|solutionrelative:cybersecurityquiz\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|c:\\users\\seoma\\source\\repos\\cybersecurityquiz\\cybersecurityquiz\\messageboxform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|solutionrelative:cybersecurityquiz\\messageboxform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|c:\\users\\seoma\\source\\repos\\cybersecurityquiz\\cybersecurityquiz\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|solutionrelative:cybersecurityquiz\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|c:\\users\\seoma\\source\\repos\\cybersecurityquiz\\cybersecurityquiz\\messageboxform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|solutionrelative:cybersecurityquiz\\messageboxform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|c:\\users\\seoma\\source\\repos\\cybersecurityquiz\\cybersecurityquiz\\messageboxform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|solutionrelative:cybersecurityquiz\\messageboxform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|c:\\users\\seoma\\source\\repos\\cybersecurityquiz\\cybersecurityquiz\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{EE9DD6BC-EAC5-4722-8F98-38B615C119FC}|CyberSecurityQuiz\\CyberSecurityQuiz.vbproj|solutionrelative:cybersecurityquiz\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\Form1.vb",
+              "RelativeDocumentMoniker": "CyberSecurityQuiz\\Form1.vb",
+              "ToolTip": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\Form1.vb [Design]",
+              "RelativeToolTip": "CyberSecurityQuiz\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-12-18T06:46:50.029Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MessageBoxForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\MessageBoxForm.vb",
+              "RelativeDocumentMoniker": "CyberSecurityQuiz\\MessageBoxForm.vb",
+              "ToolTip": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\MessageBoxForm.vb [Design]",
+              "RelativeToolTip": "CyberSecurityQuiz\\MessageBoxForm.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-12-18T10:04:49.859Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MessageBoxForm.vb",
+              "DocumentMoniker": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\MessageBoxForm.vb",
+              "RelativeDocumentMoniker": "CyberSecurityQuiz\\MessageBoxForm.vb",
+              "ToolTip": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\MessageBoxForm.vb",
+              "RelativeToolTip": "CyberSecurityQuiz\\MessageBoxForm.vb",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-12-18T07:32:04.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\Form1.vb",
+              "RelativeDocumentMoniker": "CyberSecurityQuiz\\Form1.vb",
+              "ToolTip": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\Form1.vb",
+              "RelativeToolTip": "CyberSecurityQuiz\\Form1.vb",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAACkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-12-18T07:09:44.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MessageBoxForm.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\MessageBoxForm.Designer.vb",
+              "RelativeDocumentMoniker": "CyberSecurityQuiz\\MessageBoxForm.Designer.vb",
+              "ToolTip": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\MessageBoxForm.Designer.vb",
+              "RelativeToolTip": "CyberSecurityQuiz\\MessageBoxForm.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-12-18T07:25:53.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\Form1.Designer.vb",
+              "RelativeDocumentMoniker": "CyberSecurityQuiz\\Form1.Designer.vb",
+              "ToolTip": "C:\\Users\\seoma\\source\\repos\\CyberSecurityQuiz\\CyberSecurityQuiz\\Form1.Designer.vb",
+              "RelativeToolTip": "CyberSecurityQuiz\\Form1.Designer.vb",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwJ4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-12-18T06:56:28.944Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
