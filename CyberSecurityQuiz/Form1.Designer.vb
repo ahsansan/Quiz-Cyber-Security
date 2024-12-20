@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         lblQuestion = New Label()
         radioOption1 = New RadioButton()
         radioOption2 = New RadioButton()
@@ -35,13 +36,15 @@ Partial Class Form1
         currentQ = New Label()
         lblOf = New Label()
         totalQ = New Label()
+        PictureBox1 = New PictureBox()
         groupBoxOptions.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' lblQuestion
         ' 
         lblQuestion.AutoSize = True
-        lblQuestion.Location = New Point(74, 102)
+        lblQuestion.Location = New Point(68, 470)
         lblQuestion.Name = "lblQuestion"
         lblQuestion.Size = New Size(133, 21)
         lblQuestion.TabIndex = 0
@@ -93,7 +96,7 @@ Partial Class Form1
         ' 
         ' btnNext
         ' 
-        btnNext.Location = New Point(632, 332)
+        btnNext.Location = New Point(626, 700)
         btnNext.Name = "btnNext"
         btnNext.Size = New Size(102, 31)
         btnNext.TabIndex = 5
@@ -102,7 +105,7 @@ Partial Class Form1
         ' 
         ' progressBar
         ' 
-        progressBar.Location = New Point(71, 391)
+        progressBar.Location = New Point(65, 759)
         progressBar.Name = "progressBar"
         progressBar.Size = New Size(663, 31)
         progressBar.TabIndex = 6
@@ -113,7 +116,7 @@ Partial Class Form1
         groupBoxOptions.Controls.Add(radioOption2)
         groupBoxOptions.Controls.Add(radioOption3)
         groupBoxOptions.Controls.Add(radioOption4)
-        groupBoxOptions.Location = New Point(74, 143)
+        groupBoxOptions.Location = New Point(68, 511)
         groupBoxOptions.Name = "groupBoxOptions"
         groupBoxOptions.Size = New Size(660, 163)
         groupBoxOptions.TabIndex = 7
@@ -122,7 +125,7 @@ Partial Class Form1
         ' 
         ' btnPrevious
         ' 
-        btnPrevious.Location = New Point(74, 332)
+        btnPrevious.Location = New Point(68, 700)
         btnPrevious.Name = "btnPrevious"
         btnPrevious.Size = New Size(102, 31)
         btnPrevious.TabIndex = 8
@@ -143,7 +146,7 @@ Partial Class Form1
         ' 
         currentQ.AutoSize = True
         currentQ.Font = New Font("Segoe UI", 8.861538F, FontStyle.Bold)
-        currentQ.Location = New Point(372, 337)
+        currentQ.Location = New Point(366, 705)
         currentQ.Name = "currentQ"
         currentQ.Size = New Size(20, 21)
         currentQ.TabIndex = 10
@@ -153,7 +156,7 @@ Partial Class Form1
         ' lblOf
         ' 
         lblOf.AutoSize = True
-        lblOf.Location = New Point(401, 337)
+        lblOf.Location = New Point(389, 705)
         lblOf.Name = "lblOf"
         lblOf.Size = New Size(24, 21)
         lblOf.TabIndex = 11
@@ -163,18 +166,27 @@ Partial Class Form1
         ' 
         totalQ.AutoSize = True
         totalQ.Font = New Font("Segoe UI", 8.861538F, FontStyle.Bold)
-        totalQ.Location = New Point(428, 337)
+        totalQ.Location = New Point(416, 705)
         totalQ.Name = "totalQ"
         totalQ.Size = New Size(19, 21)
         totalQ.TabIndex = 12
         totalQ.Text = "T"
         totalQ.TextAlign = ContentAlignment.MiddleLeft
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Location = New Point(68, 94)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(645, 352)
+        PictureBox1.TabIndex = 13
+        PictureBox1.TabStop = False
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(795, 823)
+        Controls.Add(PictureBox1)
         Controls.Add(totalQ)
         Controls.Add(lblOf)
         Controls.Add(currentQ)
@@ -184,12 +196,14 @@ Partial Class Form1
         Controls.Add(progressBar)
         Controls.Add(btnNext)
         Controls.Add(lblQuestion)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Cyber Security Quiz"
         groupBoxOptions.ResumeLayout(False)
         groupBoxOptions.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -207,5 +221,6 @@ Partial Class Form1
     Friend WithEvents currentQ As Label
     Friend WithEvents lblOf As Label
     Friend WithEvents totalQ As Label
+    Friend WithEvents PictureBox1 As PictureBox
 
 End Class

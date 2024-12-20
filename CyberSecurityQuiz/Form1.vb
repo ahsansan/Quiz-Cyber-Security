@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.IO
+
+Public Class Form1
     ' Struktur data untuk pertanyaan dan jawaban
     Private questions As List(Of Question)
     Private currentQuestionIndex As Integer = 0
@@ -7,10 +9,12 @@
     Private totalAnswers As Integer = 0
 
     ' Struktur untuk menyimpan pertanyaan dan jawabannya
-    Private Structure Question
+    Public Structure Question
         Dim QuestionText As String
         Dim Options As String()
-        Dim CorrectAnswer As Integer ' Indeks jawaban yang benar (0, 1, 2, 3)
+        Dim CorrectAnswer As String
+        Dim Explanation As String
+        Dim Image As String
     End Structure
 
     Public Structure AnswerReport
@@ -22,58 +26,51 @@
 
     Private answerReports As New List(Of AnswerReport)
 
+    ' Konstanta
+    Private Const VALIDATION_ERROR_TITLE As String = "Validation Error"
+    Private Const NO_ANSWER_SELECTED_MESSAGE As String = "Please select an answer before proceeding."
+
+    ' Enum Untuk Skor
+    Public Enum ScoreType
+        Excellent
+        Good
+        NeedsImprovement
+    End Enum
+
+    Private Function GetScoreType(correctAnswers As Integer) As ScoreType
+        Select Case correctAnswers
+            Case 5
+                Return ScoreType.Excellent
+            Case 3 To 4
+                Return ScoreType.Good
+            Case Else
+                Return ScoreType.NeedsImprovement
+        End Select
+    End Function
+
     ' Menyiapkan array pertanyaan
     Private Sub InitializeQuestions()
         questions = New List(Of Question) From {
             New Question With {
                 .QuestionText = "What is phishing?",
                 .Options = New String() {"Scamming via email", "Hacking into systems", "Guessing passwords", "Encrypting data"},
-                .CorrectAnswer = 0
+                .CorrectAnswer = "Scamming via email", ' Jawaban benar berupa teks
+                .Explanation = "Phishing is a type of fraud that involves sending fake emails to steal personal information.",
+                .Image = "Images/Volly-ILCS.jpeg"
             },
             New Question With {
                 .QuestionText = "Which one is a secure password?",
                 .Options = New String() {"12345", "password123", "My$ecureP@ssw0rd", "qwerty"},
-                .CorrectAnswer = 2
+                .CorrectAnswer = "My$ecureP@ssw0rd", ' Jawaban benar berupa teks
+                .Explanation = "Phishing is a type of fraud that involves sending fake emails to steal personal information.",
+                .Image = "Images/schooby.jpg"
             },
             New Question With {
                 .QuestionText = "What is a firewall?",
                 .Options = New String() {"A type of computer virus", "A network security device", "A password manager", "A malware scanner"},
-                .CorrectAnswer = 1
-            },
-            New Question With {
-                .QuestionText = "What does two-factor authentication (2FA) provide?",
-                .Options = New String() {"Stronger encryption", "An additional layer of security", "A replacement for passwords", "Anonymous browsing"},
-                .CorrectAnswer = 1
-            },
-            New Question With {
-                .QuestionText = "Which of the following is an example of malware?",
-                .Options = New String() {"Firewall", "Antivirus software", "Trojan horse", "VPN"},
-                .CorrectAnswer = 2
-            },
-            New Question With {
-                .QuestionText = "What is the purpose of a VPN?",
-                .Options = New String() {"To encrypt internet traffic", "To replace antivirus software", "To improve computer speed", "To hide your IP address"},
-                .CorrectAnswer = 3
-            },
-            New Question With {
-                .QuestionText = "What is ransomware?",
-                .Options = New String() {"Software that encrypts data for ransom", "A network security device", "A method of phishing", "An encryption algorithm"},
-                .CorrectAnswer = 0
-            },
-            New Question With {
-                .QuestionText = "Which of the following helps prevent brute-force attacks?",
-                .Options = New String() {"Using strong passwords", "Turning off the firewall", "Opening all ports", "Implementing account lockout policies"},
-                .CorrectAnswer = 3
-            },
-            New Question With {
-                .QuestionText = "What is social engineering?",
-                .Options = New String() {"Manipulating people to gain confidential information", "Developing secure applications", "Encrypting data for privacy", "Analyzing network traffic"},
-                .CorrectAnswer = 0
-            },
-            New Question With {
-                .QuestionText = "What is the main goal of ethical hacking?",
-                .Options = New String() {"To steal data", "To improve system security", "To spread malware", "To identify vulnerabilities in systems"},
-                .CorrectAnswer = 3
+                .CorrectAnswer = "A network security device", ' Jawaban benar berupa teks
+                .Explanation = "Phishing is a type of fraud that involves sending fake emails to steal personal information.",
+                .Image = "Images/mario-fucek.jpg"
             }
         }
     End Sub
@@ -88,6 +85,20 @@
             radioOption2.Text = currentQuestion.Options(1)
             radioOption3.Text = currentQuestion.Options(2)
             radioOption4.Text = currentQuestion.Options(3)
+
+            ' Menampilkan gambar?
+            If Not String.IsNullOrEmpty(currentQuestion.Image) Then
+                Dim imagePath As String = Path.Combine(Application.StartupPath, currentQuestion.Image)
+                If File.Exists(imagePath) Then
+                    PictureBox1.Image = Image.FromFile(imagePath)
+                    PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+                Else
+                    MessageBox.Show($"Image not found: {imagePath}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    PictureBox1.Image = Nothing
+                End If
+            Else
+                PictureBox1.Image = Nothing
+            End If
 
             ' Reset pilihan radio button
             radioOption1.Checked = False
@@ -111,11 +122,27 @@
                 btnPrevious.Enabled = True
             End If
         Else
-            Me.Hide() ' Sembunyikan Form1, jangan ditutup
-            ' Kirim data laporan ke MessageBoxForm
-            Dim resultMessageBox As New MessageBoxForm($"Quiz Completed! Your Score: {correctAnswers}/{questions.Count}", answerReports)
-            resultMessageBox.Owner = Me ' Set parent form ke Form1
-            resultMessageBox.ShowDialog()
+            Dim confirmationResult = MessageBox.Show(
+                "You are about to complete the quiz. Do you want to proceed to the results?",
+                "Confirmation",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            )
+
+            If confirmationResult = DialogResult.Yes Then
+                Me.Hide() ' Sembunyikan Form1, jangan ditutup
+                Dim scoreType As ScoreType = GetScoreType(correctAnswers)
+                Dim resultMessage As String = $"Quiz Completed!{Environment.NewLine}" &
+                                  $"Your Score: {correctAnswers}/5{Environment.NewLine}" &
+                                  $"Score Type: {scoreType.ToString()}"
+                ' Kirim data laporan ke MessageBoxForm
+                Dim resultMessageBox As New MessageBoxForm(resultMessage, answerReports, questions)
+                resultMessageBox.Owner = Me ' Set parent form ke Form1
+                resultMessageBox.ShowDialog()
+            Else
+                ' Jika pengguna memilih No, jangan lanjutkan ke hasil
+                Exit Sub
+            End If
         End If
     End Sub
 
@@ -134,6 +161,20 @@
             radioOption2.Text = currentQuestion.Options(1)
             radioOption3.Text = currentQuestion.Options(2)
             radioOption4.Text = currentQuestion.Options(3)
+
+            'Reset Gambar
+            If Not String.IsNullOrEmpty(currentQuestion.Image) Then
+                Dim imagePath As String = Path.Combine(Application.StartupPath, currentQuestion.Image)
+                If File.Exists(imagePath) Then
+                    PictureBox1.Image = Image.FromFile(imagePath)
+                    PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+                Else
+                    MessageBox.Show($"Image not found: {imagePath}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    PictureBox1.Image = Nothing
+                End If
+            Else
+                PictureBox1.Image = Nothing
+            End If
 
             ' Reset skor dan progres
             correctAnswers = 0
@@ -167,40 +208,35 @@
     ' Cek jawaban dan simpan laporan
     Private Function CheckAnswer() As Boolean
         Dim currentQuestion = questions(currentQuestionIndex)
-        Dim selectedAnswer As Integer = -1
         Dim selectedAnswerText As String = ""
 
         ' Tentukan jawaban yang dipilih
         If radioOption1.Checked Then
-            selectedAnswer = 0
             selectedAnswerText = radioOption1.Text
         ElseIf radioOption2.Checked Then
-            selectedAnswer = 1
             selectedAnswerText = radioOption2.Text
         ElseIf radioOption3.Checked Then
-            selectedAnswer = 2
             selectedAnswerText = radioOption3.Text
         ElseIf radioOption4.Checked Then
-            selectedAnswer = 3
             selectedAnswerText = radioOption4.Text
         End If
 
         ' Validasi jika tidak ada jawaban yang dipilih
-        If selectedAnswer = -1 Then
-            MessageBox.Show("Please select an answer before proceeding.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        If String.IsNullOrEmpty(selectedAnswerText) Then
+            MessageBox.Show(NO_ANSWER_SELECTED_MESSAGE, VALIDATION_ERROR_TITLE, MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return False
         End If
 
         ' Cek apakah jawaban benar
-        Dim isCorrect As Boolean = selectedAnswer = currentQuestion.CorrectAnswer
+        Dim isCorrect As Boolean = selectedAnswerText = currentQuestion.CorrectAnswer
 
         ' Simpan hasil jawaban
         answerReports.Add(New AnswerReport With {
-        .QuestionIndex = currentQuestionIndex,
-        .SelectedAnswer = selectedAnswerText,
-        .IsCorrect = isCorrect,
-        .CorrectAnswer = currentQuestion.Options(currentQuestion.CorrectAnswer)
-    })
+            .QuestionIndex = currentQuestionIndex,
+            .SelectedAnswer = selectedAnswerText,
+            .IsCorrect = isCorrect,
+            .CorrectAnswer = currentQuestion.CorrectAnswer
+        })
 
         ' Update skor dan progres
         If isCorrect Then
@@ -215,7 +251,6 @@
     ' Event handler ketika tombol "Next" diklik
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
         ' Cek jawaban pengguna
-        'CheckAnswer()
         If Not CheckAnswer() Then
             Return ' Jika jawaban belum dipilih, hentikan proses
         End If
